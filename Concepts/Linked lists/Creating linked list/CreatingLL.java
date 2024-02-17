@@ -1,4 +1,4 @@
-public class Main {
+public class CreatingLL {
     // Inner static class representing a node in the linked list
     static class Node {
         int data; // Data stored in the node

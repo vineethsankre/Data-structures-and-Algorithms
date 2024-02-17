@@ -1,4 +1,4 @@
-public class Main {
+public class DeletingNode {
     static class Node {
         int data; // Data stored in the node
         Node next; // Reference to the next node
@@ -24,16 +24,13 @@ public class Main {
         N4.next = N5;
         N5.next = null;
 
-        insert(3, head, 40); // Insert 40 at position 3
+        insert(head, 40); // Remove the node containing 40
     }
 
-    static void insert(int data, Node head, int pos){
-        Node toAdd = new Node(data);
-
-        // Base condition: insert at the beginning
+    static void insert(Node head, int pos){
+        // Base condition: deleting at the beginning
         if (pos == 0){
-            toAdd.next = head;
-            head = toAdd;
+            head = head.next;
             return;
         }
 
@@ -41,7 +38,6 @@ public class Main {
         for (int i = 0; i< pos - 1; i++){
             prev = prev.next;
         }
-        toAdd.next = prev.next;
-        prev.next = toAdd;
+        prev.next = prev.next.next;
     }
 }

@@ -1,4 +1,4 @@
-public class Main {
+public class Traverse {
     // Inner static class representing a node in the linked list
     static class Node<TreeNode> {
         TreeNode data; // Data stored in the node
