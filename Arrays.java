@@ -4,56 +4,62 @@ public class Arrays {
         int size;
         int rear;
 
+        // Constructor to initialize the queue with a given size
         Queue(int size) {
-            this.size = size;
-            arr = new int[size];
-            rear = -1;
+            this.size = size; // Set the size of the queue
+            arr = new int[size]; // Initialize the array to store queue elements
+            rear = -1; // Initialize rear pointer to -1 indicating an empty queue
         }
 
-        public boolean isEmpty() { // Removed static keyword
-            return rear == -1;
+        // Method to check if the queue is empty
+        public boolean isEmpty() {
+            return rear == -1; // If rear is -1, the queue is empty
         }
 
-        public boolean isFull() { // Removed static keyword
-            return rear == size - 1;
+        // Method to check if the queue is full
+        public boolean isFull() {
+            return rear == size - 1; // If rear is equal to size - 1, the queue is full
         }
 
+        // Method to remove and return the front element of the queue
         public int deQueue() {
             if (isEmpty()) {
-                System.out.println("Queue is empty");
-                return -1;
+                System.out.println("Queue is empty"); // If queue is empty, print a message
+                return -1; // Return -1 indicating failure
             }
-            int front = arr[0];
+            int front = arr[0]; // Store the front element
             for (int i = 0; i < rear; i++) {
-                arr[i] = arr[i + 1];
+                arr[i] = arr[i + 1]; // Shift elements to the left to remove the front element
             }
-            rear--;
-            return front;
+            rear--; // Decrease the rear pointer
+            return front; // Return the removed element
         }
 
+        // Method to add an element to the rear of the queue
         public void enQueue(int data) {
             if (isFull()) {
-                System.out.println("Queue is full");
-                return;
+                System.out.println("Queue is full"); // If queue is full, print a message
+                return; // Return without adding the element
             }
-            arr[++rear] = data;
+            arr[++rear] = data; // Increment rear and add the element to the rear of the queue
         }
 
+        // Method to return the front element of the queue without removing it
         public int peek() {
             if (isEmpty()) {
-                System.out.println("Queue is empty");
-                return -1;
+                System.out.println("Queue is empty"); // If queue is empty, print a message
+                return -1; // Return -1 indicating failure
             }
-            return arr[0];
+            return arr[0]; // Return the front element
         }
     }
 
     public static void main(String[] args) {
-        Queue q = new Queue(5);
-        q.enQueue(10);
+        Queue q = new Queue(5); // Create a queue of size 5
+        q.enQueue(10); // Add elements to the queue
         q.enQueue(20);
         q.enQueue(40);
-        System.out.println(q.deQueue());
-        System.out.println(q.peek());
+        System.out.println(q.deQueue()); // Remove and print the front element
+        System.out.println(q.peek()); // Print the front element without removing it
     }
 }
