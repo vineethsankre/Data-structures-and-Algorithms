@@ -17,7 +17,7 @@ public class Main {
         public static Node head = null; // Head of the stack
         
         // Method to push data onto the stack
-        public static void push(int data) {
+        public void push(int data) {
             Node newNode = new Node(data); // Create a new node with the data
             if (head == null) { // If stack is empty
                 head = newNode; // Set head to the new node
@@ -28,12 +28,12 @@ public class Main {
         }
         
         // Method to check if the stack is empty
-        public static boolean isEmpty() {
+        public boolean isEmpty() {
             return head == null; // Stack is empty if head is null
         }
         
         // Method to pop data from the stack
-        public static int pop() {
+        public int pop() {
             if (isEmpty()) { // If stack is empty
                 return -1; // Return -1 to indicate underflow
             }
@@ -43,7 +43,7 @@ public class Main {
         }
         
         // Method to peek at the top element of the stack
-        public static int peek() {
+        public int peek() {
             if (isEmpty()) { // If stack is empty
                 return -1; // Return -1 to indicate underflow
             }
