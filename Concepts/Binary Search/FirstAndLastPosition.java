@@ -8,8 +8,6 @@ public class FirstAndLastPosition {
         if (ans[0] != -1){
             ans[1] = search(nums, target, false);
         }
-
-        
         return ans;
     }
     public int search(int[] nums, int target, boolean findStartIndex){
