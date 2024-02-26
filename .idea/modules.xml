@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Concepts/Concepts.iml" filepath="$PROJECT_DIR$/Concepts/Concepts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DSA.iml" filepath="$PROJECT_DIR$/DSA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Concepts/Stack/Problems/Problems.iml" filepath="$PROJECT_DIR$/Concepts/Stack/Problems/Problems.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Concepts/Queues/Queues.iml" filepath="$PROJECT_DIR$/Concepts/Queues/Queues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Concepts/Stack/Stack.iml" filepath="$PROJECT_DIR$/Concepts/Stack/Stack.iml" />
+    </modules>
+  </component>
+</project>
