@@ -1,4 +1,4 @@
-package Concepts.Recursion;
+package Concepts.Recursion.Easy;
 
 public class Sum {
     public static void main(String[] args) {
